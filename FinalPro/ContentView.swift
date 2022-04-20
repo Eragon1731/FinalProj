@@ -17,8 +17,8 @@ struct ContentView : View {
 			Text("Instructions")
 			Text("Add description and steps here")
 			
-			NavigationLink(destination: {ARViewContainer().edgesIgnoringSafeArea(.all)}, label: { Text("Go to ARView")})
-		}
+			NavigationLink(destination:{ ARViewContainer().edgesIgnoringSafeArea(.all) }, label: { Text("Go to ARView")})
+			}
 		}
     }
 }
