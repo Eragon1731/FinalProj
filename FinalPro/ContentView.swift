@@ -10,24 +10,26 @@ import RealityKit
 import ARKit
 
 struct ContentView : View {
+	
+	var preloadContents: [String] = ["", ""]
+	var title: [String] = ["Welcome to Luft!", ""]
+	var description: [String] = ["Luft is a mobile AR experience that invites you to make your own music, through interacting with virtual balloons, each containing a unique sound.\n\nThe goal of this project is to encourage a user-system interaction by engaging users in a mobile-driven tour of a soundspace. This project also hopes to encourage user-user interactions that explore different possibilities of music-making."]
+	
     var body: some View {
 		NavigationView{
-			ScrollView{
-				VStack{
-					Text("Welcome to Luft!").font(.title)
-					Spacer().frame(height: 40)
-					Text("Project Description").font(.title2)
-					Text("Luft is a mobile AR experience that invites you to make your own music, through interacting with virtual balloons, each containing a unique sound.\n\nThe goal of this project is to encourage a user-system interaction by engaging users in a mobile-driven tour of a soundspace. This project also hopes to encourage user-user interactions that explore different possibilities of music-making.")
-					Spacer().frame(height: 40)
-					Text("Instructions").font(.title2)
-					Text("To enjoy this experience, ")
-					+ Text("please turn off Silent Mode on your phone and turn up the volume.").fontWeight(.bold)
-					Text("\n\nMake sure you are standing in a brightly lit area. Move your phone slowly and point at a flat horizontal surface. When the virtual objects appear, tap them on your phone screen to play with a sound.\n\nTry moving to an area where you can be surrounded by at least 4 people, and enjoy the symphony composed by the different sounds from different devices!")
+			TabView{
+				ForEach(Array(zip(preloadContents.indices, preloadContents)), id: \.0){ index, contentName in
+					VStack{
+						
+						Text(title[index]).font(.title)
+						Text(description[index])
+					}
+					Spacer().frame( height: 40)
 					
 				}.padding(EdgeInsets(top: 10, leading: 20, bottom: 20, trailing: 20))
-				NavigationLink(destination:{ ARViewContainer().edgesIgnoringSafeArea(.all) }, label: { Text("START")}).font(.title)
-			}.padding(EdgeInsets(top: 0, leading: 0, bottom: 40, trailing: 0))
-			
+				
+			}
+			NavigationLink(destination:{ ARViewContainer().edgesIgnoringSafeArea(.all) }, label: { Text("START")}).font(.title)
 		}
     }
 }
@@ -41,6 +43,7 @@ struct ARViewContainer: UIViewRepresentable {
 		Luftwithsound.loadSceneAsync(completion: { (result) in
 			do{
 				let boxAnchor = try Luftwithsound.loadScene()
+
 				arView.scene.anchors.append(boxAnchor)
 			}
 			catch{
@@ -72,12 +75,6 @@ extension ARView: ARCoachingOverlayViewDelegate {
 	// Set the delegate for any callbacks
 	coachingOverlay.delegate = self
   }
-//  // Example callback for the delegate object
-//	public func coachingOverlayViewDidDeactivate(
-//	_ coachingOverlayView: ARCoachingOverlayView
-//  ) {
-//	self.addObjectsToScene()
-//  }
 }
 
 #if DEBUG
