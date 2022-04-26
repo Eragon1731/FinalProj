@@ -7,22 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1171F2C32818374100159C39 /* Luftwithsound.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1171F2C22818374100159C39 /* Luftwithsound.rcproject */; };
 		11AAE0EF28062B7D00DAEF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAE0EE28062B7D00DAEF71 /* AppDelegate.swift */; };
 		11AAE0F128062B7D00DAEF71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAE0F028062B7D00DAEF71 /* ContentView.swift */; };
-		11AAE0F328062B7D00DAEF71 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 11AAE0F228062B7D00DAEF71 /* Experience.rcproject */; };
 		11AAE0F528062B7F00DAEF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AAE0F428062B7F00DAEF71 /* Assets.xcassets */; };
 		11AAE0F828062B7F00DAEF71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AAE0F728062B7F00DAEF71 /* Preview Assets.xcassets */; };
-		11AAE0FF28062B9000DAEF71 /* balloon-size-test250.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 11AAE0FE28062B9000DAEF71 /* balloon-size-test250.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1171F2C22818374100159C39 /* Luftwithsound.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Luftwithsound.rcproject; sourceTree = "<group>"; };
 		11AAE0EB28062B7D00DAEF71 /* FinalPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AAE0EE28062B7D00DAEF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11AAE0F028062B7D00DAEF71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		11AAE0F228062B7D00DAEF71 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		11AAE0F428062B7F00DAEF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11AAE0F728062B7F00DAEF71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		11AAE0FE28062B9000DAEF71 /* balloon-size-test250.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "balloon-size-test250.rcproject"; sourceTree = "<group>"; };
 		11EA170028066EE600F9F6C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,10 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				11EA170028066EE600F9F6C7 /* Info.plist */,
-				11AAE0FE28062B9000DAEF71 /* balloon-size-test250.rcproject */,
+				1171F2C22818374100159C39 /* Luftwithsound.rcproject */,
 				11AAE0EE28062B7D00DAEF71 /* AppDelegate.swift */,
 				11AAE0F028062B7D00DAEF71 /* ContentView.swift */,
-				11AAE0F228062B7D00DAEF71 /* Experience.rcproject */,
 				11AAE0F428062B7F00DAEF71 /* Assets.xcassets */,
 				11AAE0F628062B7F00DAEF71 /* Preview Content */,
 			);
@@ -147,8 +144,7 @@
 			files = (
 				11AAE0F128062B7D00DAEF71 /* ContentView.swift in Sources */,
 				11AAE0EF28062B7D00DAEF71 /* AppDelegate.swift in Sources */,
-				11AAE0F328062B7D00DAEF71 /* Experience.rcproject in Sources */,
-				11AAE0FF28062B9000DAEF71 /* balloon-size-test250.rcproject in Sources */,
+				1171F2C32818374100159C39 /* Luftwithsound.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +274,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"FinalPro/Preview Content\"";
 				DEVELOPMENT_TEAM = 3KZKL9H3HQ;
 				ENABLE_PREVIEWS = YES;
@@ -301,7 +297,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -312,7 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"FinalPro/Preview Content\"";
 				DEVELOPMENT_TEAM = 3KZKL9H3HQ;
 				ENABLE_PREVIEWS = YES;
@@ -335,7 +331,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
