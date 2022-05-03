@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		114377082820B8E500E65469 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 114377042820B8E500E65469 /* 6.jpg */; };
+		114377092820B8E500E65469 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 114377052820B8E500E65469 /* 4.jpg */; };
+		1143770A2820B8E500E65469 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 114377062820B8E500E65469 /* 5.jpg */; };
+		1143770B2820B8E500E65469 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 114377072820B8E500E65469 /* icon.png */; };
 		1171F2C32818374100159C39 /* Luftwithsound.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 1171F2C22818374100159C39 /* Luftwithsound.rcproject */; };
 		11AAE0EF28062B7D00DAEF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAE0EE28062B7D00DAEF71 /* AppDelegate.swift */; };
 		11AAE0F128062B7D00DAEF71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AAE0F028062B7D00DAEF71 /* ContentView.swift */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		114377042820B8E500E65469 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		114377052820B8E500E65469 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		114377062820B8E500E65469 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		114377072820B8E500E65469 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		1171F2C22818374100159C39 /* Luftwithsound.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Luftwithsound.rcproject; sourceTree = "<group>"; };
 		11AAE0EB28062B7D00DAEF71 /* FinalPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AAE0EE28062B7D00DAEF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +62,10 @@
 		11AAE0ED28062B7D00DAEF71 /* FinalPro */ = {
 			isa = PBXGroup;
 			children = (
+				114377052820B8E500E65469 /* 4.jpg */,
+				114377062820B8E500E65469 /* 5.jpg */,
+				114377042820B8E500E65469 /* 6.jpg */,
+				114377072820B8E500E65469 /* icon.png */,
 				11EA170028066EE600F9F6C7 /* Info.plist */,
 				1171F2C22818374100159C39 /* Luftwithsound.rcproject */,
 				11AAE0EE28062B7D00DAEF71 /* AppDelegate.swift */,
@@ -130,6 +142,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114377092820B8E500E65469 /* 4.jpg in Resources */,
+				1143770A2820B8E500E65469 /* 5.jpg in Resources */,
+				1143770B2820B8E500E65469 /* icon.png in Resources */,
+				114377082820B8E500E65469 /* 6.jpg in Resources */,
 				11AAE0F828062B7F00DAEF71 /* Preview Assets.xcassets in Resources */,
 				11AAE0F528062B7F00DAEF71 /* Assets.xcassets in Resources */,
 			);
