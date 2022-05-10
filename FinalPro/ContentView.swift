@@ -8,13 +8,17 @@
 import SwiftUI
 import RealityKit
 import ARKit
+import SDWebImageSwiftUI
 
 struct ContentView : View {
 	
 	var images: [String] = ["icon","4.jpg", "5.jpg", "6.jpg"]
 	
-	var title: [String] = ["Welcome to Luft!", "STEP 1.", "STEP 5.","STEP 6."]
-	var description: [String] = ["Luft is a mobile AR experience that invites you to make your own music, through interacting with virtual balloons, each containing a unique sound.\n\nThe goal of this project is to encourage a user-system interaction by engaging users in a mobile-driven tour of a soundspace. This project also hopes to encourage user-user interactions that explore different possibilities of music-making.", "Read the instructions before the actual experience.", "Tap on the balloons to start making your music.", "Surround yourself with other users, and your devices will come together in a symphony!"]
+	var title: [String] = ["Welcome to Luft!", "STEP 1.", "STEP 2.","STEP 3."]
+	var description: [String] = ["Luft is a mobile AR sound installation that invites users to create a collaborative, spatial sound experience.  Groups as small as three can create their own musical experience by interacting with virtual balloons that each contain musical material. Done in a group, this creates a spatialized piece of music that is unique each time you perform it.",
+								 "Participants should spread out and start 4-6 feet apart. Make sure that the volume is turned up all the way on your phone.",
+								 "Move through the installation and tap on the balloons to start making music.",
+								 "The experience lasts until all players find the “Easter egg” balloon."]
 	
     var body: some View {
 		NavigationView{
@@ -23,10 +27,17 @@ struct ContentView : View {
 					ForEach(Array(zip(images.indices, images)), id: \.0){ index, image in
 						ScrollView{
 						VStack{
+							if (index == 0){
+								 AnimatedImage(url: Bundle.main.url(forResource: "AnimatedLogo", withExtension: "gif")!)
+									.playbackMode(.normal)
+															.resizable()
+															.scaledToFit()
+							}
+							else{
 							Image(uiImage: UIImage(named: image)!)
 								.resizable()
 								.scaledToFit()
-								
+							}
 							Spacer().frame( height: 40)
 							Text(title[index]).font(.title)
 							Text(description[index])
@@ -53,9 +64,9 @@ struct ARViewContainer: UIViewRepresentable {
         
         let arView = ARView(frame: .zero)
         
-		Luftwithsound.loadSceneAsync(completion: { (result) in
+		Luftwithsoundandeasteregg.loadSceneAsync(completion: { (result) in
 			do{
-				let boxAnchor = try Luftwithsound.loadScene()
+				let boxAnchor = try Luftwithsoundandeasteregg.loadScene()
 
 				arView.scene.anchors.append(boxAnchor)
 			}
