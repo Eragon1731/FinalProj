@@ -63,12 +63,22 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
-        
+		let text = UILabel(frame: CGRect(x: UIScreen.main.bounds.width, y: 0, width: 400, height: 150))
+		let message = "Please wait for experience to load"
+		text.text = message
+		arView.addSubview(text)
+		
 		Luftwithsoundandeasteregg.loadSceneAsync(completion: { (result) in
 			do{
 				let boxAnchor = try Luftwithsoundandeasteregg.loadScene()
-
 				arView.scene.anchors.append(boxAnchor)
+				
+				switch result{
+					case.success(_):
+						text.text = ""
+				case.failure(let error):
+					print(error)
+				}
 			}
 			catch{
 				print("Error! Cannot load")
